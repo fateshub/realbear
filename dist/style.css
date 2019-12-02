@@ -1,0 +1,19 @@
+body,
+html {
+  background-color: trasperant;
+  height: 100%;
+  width: 100%;
+}
+
+.snow {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+img {
+  position: absolute;
+  height: auto;
+  top: 100%;
+  right: 0%;
+}
