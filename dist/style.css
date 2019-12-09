@@ -28,7 +28,7 @@ img {
   left: 1808px;
   animation-name: example;
   animation-duration: 5s;
-  animation-delay: 2000s;
+  animation-delay: 200s;
   animation-timing-function: ease-in-out;
 }
 
