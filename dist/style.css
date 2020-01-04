@@ -1,45 +1,5 @@
-body,
-html {
-  background-color: trasperant;
-  height: 1080px;
-  width: 1920px;
-  overflow:hidden;
-}
-
-.snow {
-  height: 1080px;
-  position: absolute;
-  width: 1920px;
-}
-
-img {
-  position: absolute;
-  height: 200px;
-  top: 880px;
-  left: 1808px;
-}
-
-.image2 {
-  position: absolute;
-  height: 112px;
-  width: 112px;
-  opacity: 0;
-  top: 100px;
-  left: 1808px;
-  animation-name: example;
-  animation-duration: 5s;
-  animation-delay: 200s;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes example {
-  0%   {left: 1920px;    opacity: 0}
-  15%  {left: 1908px ;   opacity: 1 }
-  25%  {left: 1868px ;   opacity: 1 }
-  35%  {left: 1838px ;   opacity: 1 }
-  50%  {left: 1808px;   opacity: 1}
-  75%  {left: 1868px;   opacity: 1 }
-  85%  {left: 1838px ;   opacity: 1 }
-  95%  {left: 1908px ;   opacity: 1 }
-  100% {left: 1920px;   opacity: 0}
+.smile {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
