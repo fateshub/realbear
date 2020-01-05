@@ -1,10 +1,7 @@
 var tl = gsap.timeline();
-
-//tl.fromTo(".smile", { x: -400, ease: " bounce.in" }, { duration: 1, x: 100 });
-
-
-
-
+var sound = new Howl({
+    src: ['Party.mp3']
+});
 
 const client = new tmi.Client({
     connection: {
@@ -22,6 +19,11 @@ client.on('message', (channel, tags, message, self) => {
         tl.to(".smile", { duration: 3, ease: " circ.in", x: 200 });
         tl.restart();
     }
+    if (message == '!bus' && tags['display-name'] == 'DrFate') {
+        sound.play();
+        tl.to(".bus", { duration: 15, repeat: 13, ease: " circ.in", x: -3000 });
+        tl.restart();
+    }
 
     console.log(`${tags['display-name']}: ${message}`);
 
@@ -29,9 +31,12 @@ client.on('message', (channel, tags, message, self) => {
 
 client.on("cheer", (channel, userstate, message) => {
 
-    if (userstate.bits >= 10) {
+    if (userstate.bits >= 10 && userstate.bits != 5000) {
         tl.fromTo(".smile", { y: -200 }, { duration: 2, delay: 1, ease: "bounce.out", y: 1180 });
         tl.to(".smile", { duration: 3, ease: " circ.in", x: 200 });
+        tl.restart();
+    } else if (userstate.bits == 5000) {
+        tl.to(".bus", { duration: 15, repeat: 13, ease: " circ.in", x: -3000 });
         tl.restart();
     }
 });

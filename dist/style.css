@@ -4,3 +4,10 @@
     top: -200px;
     right: 0;
 }
+
+.bus {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: -700px;
+}
