@@ -1,5 +1,6 @@
 .smile {
+    overflow: hidden;
     position: absolute;
-    top: 0;
+    top: -200px;
     right: 0;
 }
