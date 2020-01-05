@@ -1,4 +1,5 @@
 var tl = gsap.timeline();
+var tl2 = gsap.timeline();
 var sound = new Howl({
     src: ['Party.mp3'],
     volume: 0.5
@@ -22,8 +23,8 @@ client.on('message', (channel, tags, message, self) => {
     }
     else if (message == '!bus' && tags['display-name'] == 'DrFate') {
         sound.play();
-        tl.to(".bus", { duration: 15, repeat: 6, ease: " circ.in", x: -3000 });
-        tl.restart();
+        tl2.to(".bus", { duration: 15, repeat: 6, ease: " circ.in", x: -3000 });
+        tl2.restart();
     }
 
     console.log(`${tags['display-name']}: ${message}`);
@@ -38,7 +39,7 @@ client.on("cheer", (channel, userstate, message) => {
         tl.restart();
     } else if (userstate.bits == 5000) {
         sound.play();
-        tl.to(".bus", { duration: 15, repeat: 6, ease: " circ.in", x: -3000 });
-        tl.restart();
+        tl2.to(".bus", { duration: 15, repeat: 6, ease: " circ.in", x: -3000 });
+        tl2.restart();
     }
 });
