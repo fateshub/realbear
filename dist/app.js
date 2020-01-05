@@ -1,6 +1,7 @@
 var tl = gsap.timeline();
 var sound = new Howl({
-    src: ['Party.mp3']
+    src: ['Party.mp3'],
+    volume: 0.5
 });
 
 const client = new tmi.Client({
@@ -36,6 +37,7 @@ client.on("cheer", (channel, userstate, message) => {
         tl.to(".smile", { duration: 3, ease: " circ.in", x: 200 });
         tl.restart();
     } else if (userstate.bits == 5000) {
+        sound.play();
         tl.to(".bus", { duration: 15, repeat: 13, ease: " circ.in", x: -3000 });
         tl.restart();
     }
