@@ -19,7 +19,7 @@ client.on('message', (channel, tags, message, self) => {
         tl.to(".smile", { duration: 3, ease: " circ.in", x: 200 });
         tl.restart();
     }
-    if (message == '!bus' && tags['display-name'] == 'DrFate') {
+    else if (message == '!bus' && tags['display-name'] == 'DrFate') {
         sound.play();
         tl.to(".bus", { duration: 15, repeat: 13, ease: " circ.in", x: -3000 });
         tl.restart();
