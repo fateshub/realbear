@@ -29,7 +29,7 @@ client.on('message', (channel, tags, message, self) => {
 
 client.on("cheer", (channel, userstate, message) => {
 
-    if (userstate.bits == 10) {
+    if (userstate.bits >= 10) {
         tl.fromTo(".smile", { y: -200 }, { duration: 2, delay: 1, ease: "bounce.out", y: 1180 });
         tl.to(".smile", { duration: 3, ease: " circ.in", x: 200 });
         tl.restart();
