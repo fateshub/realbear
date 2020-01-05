@@ -22,7 +22,7 @@ client.on('message', (channel, tags, message, self) => {
     }
     else if (message == '!bus' && tags['display-name'] == 'DrFate') {
         sound.play();
-        tl.to(".bus", { duration: 15, repeat: 13, ease: " circ.in", x: -3000 });
+        tl.to(".bus", { duration: 15, repeat: 6, ease: " circ.in", x: -3000 });
         tl.restart();
     }
 
@@ -38,7 +38,7 @@ client.on("cheer", (channel, userstate, message) => {
         tl.restart();
     } else if (userstate.bits == 5000) {
         sound.play();
-        tl.to(".bus", { duration: 15, repeat: 13, ease: " circ.in", x: -3000 });
+        tl.to(".bus", { duration: 15, repeat: 6, ease: " circ.in", x: -3000 });
         tl.restart();
     }
 });
