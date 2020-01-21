@@ -4,3 +4,12 @@
     bottom: 0;
     left: -200px;
 }
+
+.xx {
+    overflow: hidden;
+    position: absolute;
+    bottom: 120px;
+    right: 120px;
+    opacity: 1;
+    transform: scale(0.7, 0.7);
+}
