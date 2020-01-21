@@ -1,13 +1,6 @@
-.smile {
-    overflow: hidden;
-    position: absolute;
-    top: -200px;
-    right: 0;
-}
-
-.bus {
+.finger {
     overflow: hidden;
     position: absolute;
     bottom: 0;
-    right: -350px;
+    left: -200px;
 }
