@@ -19,13 +19,7 @@ function finger() {
     return;
 }
 
-function xx() {
-    tl.fromTo(".xx", { opacity: 0 }, { duration: 2, opacity: 1 }, );
-    tl.fromTo(".xx", { opacity: 1 }, { delay: 3, opacity: 0, duration: 2 });
-    tl.restart();
-    tl.remove();
-    return;
-}
+
 
 
 client.on('message', (channel, tags, message, self) => {
@@ -37,9 +31,10 @@ client.on('message', (channel, tags, message, self) => {
         tl.remove();
         tl.restart();
         return;
-    } else if (message == "TreatStreamTime" && tags['display-name'] == "DrFate") {
-        xx();
-        return;
-    }
-
+        else
+        {
+        tl.remove();
+        tl.restart();
+        }
 });
+    
