@@ -14,5 +14,6 @@ client.on("subgift", (channel, username, streakMonths, recipient, methods, users
     // Do your stuff.
 	count++;
 	document.getElementById("hah").innerHTML = count;
+	document.getElementById("non").innerHTML = username;
 
 });

@@ -6,29 +6,42 @@ body{
   padding: 0;
 
 }
+#nah {
+  position: absolute;
+  left: 0px;
+  color: rgb(79, 32, 188);
 
+}
 
 #hah {
-    position: absolute;
-    bottom: 1rem;
+  position: relative;
+  top: 1.3rem;
     left: 200px;
-    color: slategrey;
+    color: rgb(79, 32, 188);
 
   }
-  #nah {
+  
+  #nan {
     position: absolute;
-    bottom: 1rem;
     left: 0px;
-    color: slategrey;
+    color: rgb(32, 188, 149);
+
+  }
+  #non {
+    position: relative;
+    top: 1.2rem;
+    left: 200px;
+    color: rgb(79, 32, 188);
 
   }
 
 #imgg{
   position: absolute;
   left: 250px;
-  bottom: -8rem;
-  -webkit-animation: animation 1000ms linear both;
+  top: 8.5rem;
+  -webkit-animation: animation 1000ms linears both;
   animation: animation 1000ms linear both;
+     z-index: -1;
   }
   
   /* Generated with Bounce.js. Edit at http://bouncejs.com#%7Bs%3A%5B%7BT%3A%22t%22%2Ce%3A%22B%22%2Cd%3A1000%2CD%3A0%2Cf%3A%7Bx%3A0%2Cy%3A0%7D%2Ct%3A%7Bx%3A0%2Cy%3A-100%7D%2Cs%3A3%2Cb%3A4%7D%5D%7D */
