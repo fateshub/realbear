@@ -5,7 +5,7 @@ const client = new tmi.Client({
 		secure: true,
 		reconnect: true
 	},
-	channels: ['scrubing']
+	channels: ['drafte']
 });
 
 client.connect();
