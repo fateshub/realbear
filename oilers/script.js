@@ -19,6 +19,8 @@ client.on("subgift", (channel, username, streakMonths, recipient, methods, users
 });
 
 
-client.on("raw_message", (messageCloned, message) => {
-    console.log(message.raw);
+
+client.on("message", (channel, userstate, message, self) => {
+    console.log(userstate["emotes"]);
+
 });
