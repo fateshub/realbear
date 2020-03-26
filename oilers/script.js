@@ -17,3 +17,8 @@ client.on("subgift", (channel, username, streakMonths, recipient, methods, users
 	document.getElementById("non").innerHTML = username;
 
 });
+
+
+client.on("raw_message", (messageCloned, message) => {
+    console.log(message.raw);
+});
