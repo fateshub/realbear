@@ -1,0 +1,36 @@
+body{
+
+
+  font-family: 'Roboto Condensed', sans-serif;
+
+  overflow: hidden;
+  background-color:transparent;;
+  padding: 0;
+
+}
+#myCanvas{
+      position: absolute;
+  background-color: rgb(240, 140, 215);;
+  z-index: -1;
+  shape-outside: polygon(0 0, 0 100%, 100% 100%);
+}
+  
+  #nan {
+    position: absolute;
+    color: rgb(16, 8, 35);
+
+  }
+  #giftown {
+    position: absolute;
+    left: 200px;
+    color: rgb(16, 8, 35);
+
+  }
+
+#gift{
+  position: absolute;
+  left: 250px;
+  top:1rem;
+
+  }
+  
