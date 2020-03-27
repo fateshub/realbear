@@ -17,7 +17,7 @@ requeste.push(username);
 client.on('message', (channel, tags, message, self) => {
 		console.log(`${tags['display-name']}: ${message}`);
 		for (let i = 0, l = requester.length; i < l; i += 1) {	
-	    if(tags['username']== requester[i]){
+	    if(tags['username']== requester[i] || tags['username']=="dib760"){
 		var res = message.substring(message.length - 11, message.length);
 		list.push(res);
 		document.getElementById("counter").innerText = list;
