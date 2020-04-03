@@ -9,9 +9,9 @@ ComfyJS.onChat = ( user, message, flags, self, extra ) => {
 	if(extra.messageEmotes){
 			document.getElementById("emotes").src = "https://static-cdn.jtvnw.net/emoticons/v1/"+emote[0].replace(/[^0-9 ]/g, "")+"/3.0";
 			var emoteanim = document.getElementById("emotes");
-			emoteanim.classList.add('animated','rollIn');
+			emoteanim.classList.add('animated','tada');
 			emoteanim.addEventListener("animationend", function(){
-				emoteanim.classList.remove('animated','rollIn')
+				emoteanim.classList.remove('animated','tada')
 			});
 			
 
