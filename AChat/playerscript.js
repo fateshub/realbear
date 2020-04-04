@@ -3,6 +3,7 @@
 ComfyJS.Init( "scrubing" );
 ComfyJS.onChat = ( user, message, flags, self, extra ) => {
 	console.log( user, message );
+		if(flags.highlighted){
 	document.getElementById("text").innerText = message;
 	document.getElementById("user").innerText = user;
 
@@ -13,12 +14,7 @@ ComfyJS.onChat = ( user, message, flags, self, extra ) => {
     Actext()
 	window.fitText( document.getElementById("text"), 1.8 );
 	window.fitText( document.getElementById("user"), 0.8 );
-
-	var emote = JSON.stringify(extra.messageEmotes).split(":");
-	if(extra.messageEmotes){
-			document.getElementById("emotes").src = "https://static-cdn.jtvnw.net/emoticons/v1/"+emote[0].replace(/[^0-9 ]/g, "")+"/3.0";
-			animation("emotes",'tada');
-		} 
+		}
   }
 
   function animation(parameter1, parameter2) {
