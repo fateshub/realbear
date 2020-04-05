@@ -13,7 +13,7 @@ body{
   text-align: center;
   left: 90px;
   top: 80px;
-  color: rgb(203, 203, 169);
+  color: rgb(41, 41, 41);
 
   width: 500px;
   height: 150px; 
@@ -21,7 +21,7 @@ body{
 #user{
   position: absolute;
   left: 3rem;
-  top:  .2rem;
+  top:  0.8rem;
   color: rgb(41, 41, 41);
   text-align: center;
   width: 200px;

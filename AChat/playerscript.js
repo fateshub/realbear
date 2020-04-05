@@ -6,15 +6,14 @@ var timer = new Timer("100 milliseconds");
 ComfyJS.Init( "scrubing" );
 ComfyJS.onChat = ( user, message, flags, self, extra ) => {
 	console.log( user, message );
-	if(flags.highlighted){
 	document.getElementById("container").style.visibility = "visible"; 
 	timer.reset()
 	document.getElementById("text").innerText = message;
 	document.getElementById("user").innerText = user;
 	console.log( extra.messageEmotes );
 	animation("buble","jackInTheBox");
-	animation("text","jackInTheBox");
-	animation("user","jackInTheBox");
+	animation("text","zoomIn");
+	animation("user","zoomIn");
     Actext()
 	window.fitText( document.getElementById("text"), 1.9 );
 	window.fitText( document.getElementById("user"), 0.9 );	
@@ -23,7 +22,7 @@ ComfyJS.onChat = ( user, message, flags, self, extra ) => {
 		console.log('timer event every 1 minute, 20 seconds');
  	});
 	 timer.start();
-  }
+  
 }
   function animation(parameter1, parameter2) {
 	var buble = document.getElementById(parameter1);
