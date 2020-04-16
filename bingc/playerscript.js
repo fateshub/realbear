@@ -27,7 +27,7 @@ client.on('message', (channel, tags, message, self) => {
 	});
   } 
   
-  setInterval(alert,20000);
+  setInterval(alert,25000);
 
   function alert() {
 	if(count.length == 1){
@@ -47,7 +47,7 @@ client.on('message', (channel, tags, message, self) => {
 		duration: 20000,
 		easing: 'linear',
 		begin: function(anim) {
-
+			count.pop(0);
 		},
 		complete: function(anim) {
 			console.log("cunt");
@@ -64,7 +64,6 @@ client.on('message', (channel, tags, message, self) => {
 				duration: 1,
 				easing: 'linear'
 			});
-			count.pop(0);
 
 		}
 	  });
