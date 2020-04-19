@@ -9,10 +9,10 @@ body{
 }
 #text{
   position: absolute;
-  left: 30%;
-    top: -150px;
-  color: rgb(41, 41, 41);
-
+  left: 50%;
+  top: -150px;
+  color: rgb(60, 116, 239);
+  text-shadow: #000 0px 0px 1px;
   width: 500px;
   height: 150px; 
 }
