@@ -1,0 +1,52 @@
+body{
+
+
+  font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-seri;
+  overflow: hidden;
+  background-color:transparent;;
+  padding: 0;
+
+}
+#text{
+  position: absolute;
+  left: 30%;
+    top: -150px;
+  color: rgb(41, 41, 41);
+
+  width: 500px;
+  height: 150px; 
+}
+
+#bingc{
+  position: absolute;
+  width: 400px; 
+    bottom: 0px;
+    right: -400px;
+  }
+#wave{
+    position: absolute;
+    bottom: -230px;
+    left: 0px;
+    z-index: 1;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      height: auto; 
+    width: 1920px; 
+    scale: 1.1;
+
+
+}
+    
+#waveb{
+  position: absolute;
+  bottom: -230px;
+    left: 0px;
+z-index: -1;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    height: auto; 
+    width: 1920px; 
+  scale: 1.1;
+}
+    
