@@ -26,7 +26,7 @@ var app = new Vue({
 
   }
 
-ComfyJS.Init( "drfate" );
+ComfyJS.Init( "scrubing" );
 
 
 function playSound(){
