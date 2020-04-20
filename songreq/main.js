@@ -18,7 +18,7 @@ function remeve(){
     list.shift();
     player.loadVideoById(list[0]);
   }
-    else if(list.length == 1 && player.data == YT.PlayerState.PLAYING ){
+    else if(list.length <= 1 ){
     stopVideo();
     list.shift();
     }
@@ -75,7 +75,7 @@ function remeve(){
   } 
 
 ComfyJS.onCommand = ( user, command, message, flags, extra ) => {
-  if( (flags.broadcaster  || user.toLowerCase() == "dib760") && command === "sr" ) {
+  if( (flags.broadcaster  || user.toLowerCase() == "dib760" ||  user.toLowerCase() == "drfate" ) && command === "sr" ) {
     
     var video_id = message.split('v=')[1];
 var ampersandPosition = video_id.indexOf('&');
@@ -85,4 +85,4 @@ if(ampersandPosition != -1) {
     list.push(video_id);
   }
 }
-ComfyJS.Init( "drfate" );
+ComfyJS.Init( "scrubing" );
