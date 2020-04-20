@@ -1,0 +1,87 @@
+body{
+
+
+  font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-seri;
+  background-color: rgb(45, 45, 45);
+  padding: 0;
+
+}
+#app{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 500px;
+  height: 500px;
+  background-color: seashell;
+}
+#player 
+{
+position: relative;
+left: 600px;
+top: 10px;
+}
+
+#buttons{
+  position: relative;
+  top: 600px;
+  margin-top: 10px;
+
+}
+#text{
+  position: absolute;
+  left: 50%;
+  top: -150px;
+  color: rgb(0, 0, 0);
+  text-shadow: #000 0px 0px 1px;
+  width: 500px;
+  height: 150px; 
+}
+
+
+    #b1{
+      background-color:rgb(93, 176, 125);
+      border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+    }
+
+    #list{
+            padding: 15px 32px;
+            margin: 5;
+      
+    }
+    #b2{
+      background-color:rgb(93, 176, 125);
+      border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+    }
+    #b3{
+      background-color:rgb(93, 176, 125);
+      border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+    }
+
+    #myRange{
+      position: absolute;
+    margin-top: 10px;
+    right : 400px;
+    appearance: none;
+  width: 130px; /* Full-width */
+  height: 30px; /* Specified height */
+  background: #6a6e9d;
+
+    }
+
+    #volume{
+      position: absolute;
+      right : 540px;
+      margin-top: 10px;
+
+      height: 30px; /* Specified height */
+
+    }
