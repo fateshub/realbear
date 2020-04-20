@@ -18,7 +18,7 @@ function remeve(){
     list.shift();
     player.loadVideoById(list[0]);
   }
-    else if(list.length == 1 && player.data != YT.PlayerState.PLAYING ){
+    else if(list.length == 1 && player.data == YT.PlayerState.PLAYING ){
     stopVideo();
     list.shift();
     }
@@ -83,10 +83,6 @@ if(ampersandPosition != -1) {
   video_id = video_id.substring(0, ampersandPosition);
 }
     list.push(video_id);
-    if(list.length == 0)
-  {
-    startP();
-  }
   }
 }
 ComfyJS.Init( "drfate" );
