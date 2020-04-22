@@ -1,11 +1,12 @@
 
 var list = [];
+var users = ["drfate", "dib760"]
 var slider = document.getElementById("myRange");
 var app = new Vue({
     el: '#app',
     data: {
-      message: 'Welcome To The Furry Pirates ',
-      queu: list
+      queu: list,
+      users: users
     }
   })
 
@@ -73,21 +74,25 @@ function remeve(){
     player.setVolume(this.value);
     
   } 
+  function playVideo() {
+    player.playVideo();
+  }
 
-ComfyJS.onCommand = ( user, command, message, flags, extra ) => {
-  if( (flags.broadcaster  || user.toLowerCase() == "dib760" ||  user.toLowerCase() == "drfate" ) && command === "sr" ) {
-    
+
+  ComfyJS.onChat = ( user, message, flags, self, extra ) => {
+    if(flags.highlighted){    
     var video_id = message.split('v=')[1];
 var ampersandPosition = video_id.indexOf('&');
 if(ampersandPosition != -1) {
   video_id = video_id.substring(0, ampersandPosition);
 }
     list.push(video_id);
-      if(list.length <= 1){
+    if(list.length <= 1){
       startP();
       console.log("haha");
     }
   }
-    
+
 }
 ComfyJS.Init( "scrubing" );
+
