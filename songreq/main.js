@@ -7,7 +7,6 @@ var app = new Vue({
     el: '#app',
     data: {
       queu: videos,
-      users: users
     }
   })
 
