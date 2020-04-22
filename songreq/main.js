@@ -1,11 +1,13 @@
 
 var list = [];
+var videos = []
+var request = new XMLHttpRequest();
 var users = ["drfate", "dib760"]
 var slider = document.getElementById("myRange");
 var app = new Vue({
     el: '#app',
     data: {
-      queu: list,
+      queu: videos,
       users: users
     }
   })
@@ -17,15 +19,18 @@ var i =0;
 function remeve(){
   if(list.length > 1){
     list.shift();
+    videos.shift();
     player.loadVideoById(list[0]);
   }
     else if(list.length <= 1 ){
     stopVideo();
     list.shift();
+    videos.shift();
     }
     else{
       player.loadVideoById(list[0]);
       list.shift();
+      videos.shift();
     }
   }
 
@@ -56,6 +61,7 @@ function remeve(){
    function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.ENDED) {
       list.shift();
+      videos.shift();
       player.loadVideoById(list[0]);
     }
   }
@@ -78,7 +84,6 @@ function remeve(){
     player.playVideo();
   }
 
-
   ComfyJS.onChat = ( user, message, flags, self, extra ) => {
     if(flags.highlighted){    
     var video_id = message.split('v=')[1];
@@ -87,6 +92,7 @@ if(ampersandPosition != -1) {
   video_id = video_id.substring(0, ampersandPosition);
 }
     list.push(video_id);
+    videoname(video_id); 
     if(list.length <= 1){
       startP();
       console.log("haha");
@@ -96,3 +102,22 @@ if(ampersandPosition != -1) {
 }
 ComfyJS.Init( "scrubing" );
 
+function input() {
+users.push(input)  ;
+console.log(users);
+
+}
+
+
+
+function videoname(vid ){
+ request.open('GET', "https://noembed.com/embed?url=https://www.youtube.com/watch?v=" + vid, true);
+  request.onload = function() {
+    var data = JSON.parse(this.response)
+    console.log(data.title)
+    videos.push(data.title);
+  }
+  
+  // Send request
+  request.send()
+}

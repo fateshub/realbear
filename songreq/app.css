@@ -10,20 +10,26 @@ body{
   position: absolute;
   left: 10px;
   top: 10px;
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 100%;
   background-color: seashell;
-}
+  display: flex; 
+  flex-direction:column;
+  overflow-y: scroll;
+  border: 5px solid rgb(93, 176, 125);}
 #player 
 {
 position: relative;
-left: 600px;
-top: 10px;
+top: 20px;
+border: 5px solid rgb(93, 176, 125);
 }
-
+#Youtube{
+position: absolute;
+right: 10rem;
+} 
 #buttons{
   position: relative;
-  top: 600px;
+  top: 10px;
   margin-top: 10px;
 
 }
@@ -68,8 +74,9 @@ top: 10px;
 
     #myRange{
       position: absolute;
-    margin-top: 10px;
-    right : 400px;
+    margin-top: 30px;
+    margin-left: 20px;
+    left: 20px;
     appearance: none;
   width: 130px; /* Full-width */
   height: 30px; /* Specified height */
@@ -79,9 +86,7 @@ top: 10px;
 
     #volume{
       position: absolute;
-      right : 540px;
-      margin-top: 10px;
-
+      margin-top: 30px;
       height: 30px; /* Specified height */
 
     }

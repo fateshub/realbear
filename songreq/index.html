@@ -2,18 +2,18 @@
 <html>
 <head>
   <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
-
 </head>
 <body>
 
 
 <div id="app">
  <ul id="list" v-for="item in queu"> {{ item }}
-
  </div>
+
+ <div id="Youtube" >
  <div id="buttons">
   <input id="b1" type="button" value="Skip Song" onclick="remeve();" /> 
-  <input id="b2" type="button" value="Play Video" onclick="playVideo();" />
+  <input id="b2" type="button" value="Play Videor" onclick="playVideo();" />
   <input id="b3" type="button" value="Pause Video" onclick="pauseVideo();" />  
 
  </div>
@@ -23,6 +23,8 @@
     <img src="volume.png" id=volume>
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
   </div>
+
+</div>
  <link rel="stylesheet" type="text/css"  href="app.css">
  <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js "></script>
  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
