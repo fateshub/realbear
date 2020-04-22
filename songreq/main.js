@@ -2,7 +2,6 @@
 var list = [];
 var videos = []
 var request = new XMLHttpRequest();
-var users = ["drfate", "dib760"]
 var slider = document.getElementById("myRange");
 var app = new Vue({
     el: '#app',
@@ -49,6 +48,7 @@ function remeve(){
     player = new YT.Player('player', {
       height: '390',
       width: '640',
+      playerVars: { 'autoplay': 1, 'controls': 0 },
       events: {
         'onStateChange': onPlayerStateChange
       }
