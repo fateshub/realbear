@@ -1,0 +1,15 @@
+:root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+#kirby {
+    position: absolute;
+    width: 10%;
+    right: -200px;
+    bottom: -10px;
+}
